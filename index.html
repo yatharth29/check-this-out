@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Rose Day, My Love! 🌹</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #ffe6e6;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 { color: red; }
+        #rose {
+            width: 200px;
+            transition: transform 1s ease-in-out;
+            cursor: pointer;
+        }
+        #rose:hover {
+            transform: scale(1.1);
+        }
+        #message {
+            display: none;
+            font-size: 20px;
+            color: #b30000;
+            margin-top: 20px;
+            max-width: 80%;
+        }
+        @keyframes bloom {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Rose Day, My Love! ❤️</h1>
+    <img id="rose" src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Red_rose.JPG" alt="Rose" onclick="revealMessage()">
+    <p id="message">You are the most beautiful rose in my garden of life. 🌹</p>
+    
+    <audio id="song" src="https://www.soundjay.com/button/beep-07.wav"></audio>
+
+    <script>
+        function revealMessage() {
+            document.getElementById('message').style.display = 'block';
+            document.getElementById('rose').style.animation = 'bloom 2s ease-in-out';
+            document.getElementById('song').play();
+        }
+    </script>
+</body>
+</html>
